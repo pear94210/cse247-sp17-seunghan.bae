@@ -1,4 +1,4 @@
-Your TA's name:
+Your TA's name: 
 
 
 
@@ -6,8 +6,8 @@ Students in your studio group:
 
     Name        Student ID (begins with a 4)
 	
-1.
-2.
+1. Seunghan Bae 423311
+2. Skylar Nam   435454
 3.
 4.
 5.
