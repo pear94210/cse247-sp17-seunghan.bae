@@ -1,6 +1,6 @@
 package week1;
 
-public class Question1 {
+public class Problem1 {
 
 	/* Question 2.2-2
 	 * 
