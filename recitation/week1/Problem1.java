@@ -1,8 +1,10 @@
 package week1;
 
+import java.util.Arrays;
+
 public class Problem1 {
 
-	/* Question 2.2-2
+	/* Problem 2.2-2
 	 * 
 	 *  for i = 1 to A.length - 1
 	 * 		min = i
@@ -13,34 +15,24 @@ public class Problem1 {
 	 * 		A[i] = A[min]
 	 * 		A[min] = temp
 	 * 
-	 * Outer loop : A[1] ~ A[i-1] smallest (i-1) nums, nondecreasing order
-	 * Inner loop : A[min] be smallest among A[i] ~ A[j-1]
+	 * Loop invariants : "how each loop leads us to the end result of the program"
+	 * i-loop : A[1] ~ A[i-1] are sorted (smallest i-1 numbers, nondecreasing order)
+	 * j-loop : A[min] be smallest among A[i] ~ A[j-1]
 	 * 
-	 * Need to compare two entries (i and j), but if i = n then there is no j to compare (i be the largest #, redundant process)
+	 * Need to compare two entries (i and j), but if i = n then there is no j to compare
+	 * (i be the largest #, redundant process)
 	 * 
-	 * Best case (OMEGA(n^2)) : (n-1)(1+
-	 * Worst case (O(n^2)) : (n-1)(1+
-	 * THETA(n^2)
+	 * (n-1)+(n-2)+...+2+1 = n(n-1)/2 => THETA(n^2)
+	 * (best and worst cases both follow same THETA)
 	 * 
 	 * http://clrs.skanev.com/02/02/02.html
 	 */
 		
 	public static void main(String[] args) {
-		int[] A = {2, 7, 4, 3, 1, 5, 6, 0};
+		int[] A = {8, -2, 7, -4, 3, 1, -5, 6, 0};
 		
-		for (int i = 0; i < A.length; i++) {
-			System.out.print(A[i] + " ");
-		}
-		System.out.println();
+		System.out.println(Arrays.toString(A));
 		
-		int[] B = switchArray(A);
-		
-		for (int i = 0; i < B.length; i++) {
-			System.out.print(B[i] + " ");
-		}
-	}
-	
-	public static int[] switchArray(int[] A) {
 		for (int i = 0; i < A.length - 1; i++) {
 			int loc = i;
 			
@@ -55,7 +47,6 @@ public class Problem1 {
 			A[loc] = temp;
 		}
 		
-		return A;
+		System.out.print(Arrays.toString(A));
 	}
-
 }
