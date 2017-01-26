@@ -43,6 +43,11 @@ public class ProbA extends QuietAlgorithm {
 			j = j + 1;
 		}
 	}
+	// n = 0 : 0
+	// n = 1 : 0
+	// n = 2 : 1
+	// n = 3 : 2
+	// formula = n - 1 for n >= 1
 	
 	public String toString() {
 		return "Problem A";

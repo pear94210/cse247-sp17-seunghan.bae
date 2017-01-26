@@ -43,6 +43,11 @@ public class ProbE extends QuietAlgorithm {
 			j = j + 1;
 		}
 	}
+	// n = 0 : 0
+	// n = 1 : 0
+	// n = 2 : 0 + 3
+	// n = 3 : 0 + 3 + 8
+	// formula = (1^2-1) + (2^2-1) + ... + (n^2-1) = (1^2 + ... + n^2) - n = n(n+1)(2n+1)/6 - n
 	
 	public String toString() {
 		return "Problem E";

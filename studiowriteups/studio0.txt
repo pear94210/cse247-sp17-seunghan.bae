@@ -1,4 +1,4 @@
-Your TA's name: 
+Your TA's name:
 
 
 
@@ -6,8 +6,8 @@ Students in your studio group:
 
     Name        Student ID (begins with a 4)
 	
-1. Seunghan Bae 423311
-2. Skylar Nam   435454
+1.Skylar Nam                435454
+2.Seunghan Bae              423311
 3.
 4.
 5.
@@ -16,46 +16,58 @@ Students in your studio group:
 Below each question, type in your short, to-the-point answers.
 
 Question A1: 
-	What do you see in both plots? 
-	Are there any differences between the two?
-	What could account for those differences?
+	What do you see in both plots? We both see nice quadratic graphs from ticks and time. 
+	Are there any differences between the two? They are almost similar; a little difference with y values (measure) and the shapes
+	What could account for those differences? ticks are constantly increasing whereas time varies a little depending on the running of the program
 	
 Discuss this (and all your responses for this assignment) with your TA as you go.
 
 Question A2:
 	Why do the times provided for Quadratic produce such a nice plot, while the original values of Linear did not?
+	Because it took such less time to run a linear tick & time, we couldn't find a noticeable difference while running each ticks & times (for diff. n values)
 	
 Question A3: 
 	From the runs you have tried so far, how does the placement of ticker.tick() calls affect the plots you see? 
 	In particular, do the changes affect the shapes of the curves, the values plotted, or both
+	Adding more ticker.tick() to the run() doesn't seem to create a noticeable difference, again
+	the y values have changed, and some points of the time plot changed but the overall shapes are all the same.
 	
 Question A4: 
 	In terms of n, how would you characterize, in the most simple terms, 
 	the time and ticks curves that have been generated so far?
+	n^2
 		
 Question A5: 
 	What would happen if you deleted all ticker.tick() calls in the innermost loop,
 	while leaving other calls to ticker.tick() that you just placed in run()?
+	because we deleted the calls in the innermost loop that dominates the curve (n^2), there will be a difference (n^2 -> n).
 	
 Question B1:
 	What do you see? How do the curves reflect the code inside AddsTwoNumbers?
+	The curves reflect that the code is run constantly every time we run (c)
 	Do you think the value of n matters here in terms of the time it takes to perform the operation?
 	Why or why not?
+	We don't think it matters, because regardless of the size of n we will run the operation constant times (100000000L this case)
 	
 Question B2:
 	What do the data and plot tell you about the time it takes to allocate an array of n integers?
+	tick is constant whereas time is linear
 	Is it reasonable to say that the line of code
 
  		this.array = new int[this.n]
  		
 	takes a constant amount of time, independent of the value of this.n?
+	it takes n time. so it is not independent
 	
 Question B3:
 	Do the ticks agree in shape with the time we measured in running the Allocates code?
+	No.
 	
 Question B4:
 	Are the plots more similar to each other than before?
+	ticks and time graphs became similar
 	What does this tell you about how much time it takes to allocate an array of n integers?
+	time increases proportionately as the n increases.
 	
 Question B5:
 	Which group do you expect to finish first?
@@ -68,18 +80,25 @@ Question B5:
 		Under what circumstances is the tally mark notation more efficient than decimal notation?
 		
 	If you are not sure, take a look the link from the assignment web page.
+	Decimal notation is generally more efficient; 
+	Tally mark - better visualization, small numbers
 	
 Question D1:
 	How would you describe the curve you see?
+	tick: quadratic
+	
 	As a team, think about possible polynomial functions that could generate such a curve.
 	Write your answer here:
+	x^2
+	
+	D2, D3 takeaways: tick grows much faster when growing by one than doubling.
 	
 Question E1:
 	What is the closed form solution for T(n)?
+	(n+1)n/2 -> n^2
 	
 Question E2:
 	What is the closed form solution for T(n)?
 	Can you express this result in terms of n, as well as k?
 	Write your answer here:
-	
-	
+	2^(k+1)-1 -> 2n
