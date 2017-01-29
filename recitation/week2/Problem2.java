@@ -1,6 +1,8 @@
 package week2;
 
 public class Problem2 {
+	
+	// Problem 3-4 (p62)
 
 	/*
 	 * (a) NO: f(n) = n, g(n) = n^2
