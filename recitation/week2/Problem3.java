@@ -2,6 +2,8 @@ package week2;
 
 public class Problem3 {
 
+	// runtime = big O time
+	
 	int product(int a, int b) {
 		int sum = 0;
 		for (int i = 0; i < b; i++) {
@@ -18,7 +20,7 @@ public class Problem3 {
 		int div = a / b;
 		return a - div * b;
 	}
-	// runtime = 1
+	// runtime = 1 (constant)
 	
 	int div(int a, int b) {
 		int count = 0;
