@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class Problem1 {
 
-	/* Problem 2.2-2
+	/* 
+	 * Problem 2.2-2
 	 * 
 	 *  for i = 1 to A.length - 1
 	 * 		min = i
