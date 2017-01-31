@@ -11,7 +11,7 @@ public class Problem3 {
 		}
 		return sum;
 	}
-	// runtime = b
+	// runtime = O(b)
 	
 	int mod(int a, int b) {
 		if (b <= 0) {
@@ -20,7 +20,7 @@ public class Problem3 {
 		int div = a / b;
 		return a - div * b;
 	}
-	// runtime = 1 (constant)
+	// runtime = O(1) (constant)
 	
 	int div(int a, int b) {
 		int count = 0;
@@ -31,7 +31,7 @@ public class Problem3 {
 		}
 		return count;
 	}
-	// runtime = a / b
+	// runtime = O(a/b)
 	
 	int sumDigits(int n) {
 		int sum = 0;
@@ -41,6 +41,6 @@ public class Problem3 {
 		}
 		return sum;
 	}
-	// big O time = log(n)
+	// big O time = O(log(n))
 	
 }

@@ -14,6 +14,11 @@ public class Problem2 {
 	 *     => 2^lg(f(n)) = f(n) <= cg(n) = c*2^lg(g(n))
 	 *     => 2^lg(f(n)) = O(2^lg(g(n)))
 	 *     => lg(f(n)) = O(lg(g(n)))
+	 *     
+	 *     or
+	 *     
+	 *     => lg(f(n)) <= lg(cg(n)) = lg(c) + lg(g(n) <= lg(c)lg(g(n)) + lg(g(n)) = (lg(c) + 1)lg(g(n)) = dlg(g(n))
+	 *     => lg(f(n)) = O(lg(g(n))
 	 */
 	
 	/* (d) NO: f(n) = 2n, g(n) = n
