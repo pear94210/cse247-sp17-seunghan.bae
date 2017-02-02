@@ -11,12 +11,15 @@ import timing.Ticker;
  */
 public class LinkedListWithTail<T> implements List<T> {
 	
-	private ListNode<T> head;
+	private ListNode<T> head, tail;
 	private Ticker ticker;
+	private int listSize;
 	
 	public LinkedListWithTail(Ticker ticker) {
 		this.head = null;   // nothing in our list yet
+		this.tail = null;
 		this.ticker = ticker;
+		this.listSize = 0;
 	}
 
 	/**
@@ -34,25 +37,17 @@ public class LinkedListWithTail<T> implements List<T> {
 			ListNode<T> p = new ListNode<T>();
 			p.value = thing;
 			head = p;
-			ticker.tick(3);  // for the 3 statements above
+			tail = p;
+			this.listSize++;
+			ticker.tick(5);  // for the 5 statements above
 		}
 		else {
 			ListNode<T> q = new ListNode<T>();
 			q.value = thing;
-			//
-			// As given, this
-			// searches for the end of the list
-			// Modify this code using your new tail reference
-			//  and get rid of this loop!
-			//
-			ListNode<T> p = head;
-			while (p.next != null) {
-				ticker.tick();
-				p = p.next;
-			}
-			//  p is where it needs to be slide 201
-			p.next = q;
-			ticker.tick(3);  // for the 3 statements not in the loop
+			this.tail.next = q;
+			this.tail = q;
+			this.listSize++;
+			ticker.tick(5);  // for the 5 statements above
 		}
 		
 	}
@@ -63,12 +58,9 @@ public class LinkedListWithTail<T> implements List<T> {
 	 */
 	@Override
 	public int getSize() {
-		int ans = 0;
-		for (ListNode<T> p = this.head; p != null; p = p.next) {
-			ans = ans + 1;
-			ticker.tick();
-		}
-		return ans;
+		int n = this.listSize;
+		ticker.tick();
+		return n;
 	}
 
 	/**
