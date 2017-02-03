@@ -3,10 +3,11 @@ package week1;
 import java.util.Arrays;
 
 public class Problem1 {
-
-	// Problem 2.2-2 (p29)
 	
-	/* for i = 1 to A.length - 1
+	/*
+	 * Problem 2.2-2 (p29)
+	 * 
+	 * for i = 1 to A.length - 1
 	 * 		min = i
 	 * 		for j = i + 1 to A.length
 	 * 			if A[j] < A[min]
