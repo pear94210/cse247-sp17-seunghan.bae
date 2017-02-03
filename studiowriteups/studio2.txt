@@ -1,6 +1,6 @@
 Studio 2 write up
 
-Your TA's name:
+Your TA's name: Austin Ramos
 
 
 
@@ -8,8 +8,8 @@ Students in your studio group:
 
     Name        Student ID (begins with a 4)
 	
-1.
-2.
+1.Skylar Nam        435454
+2.Seunghan Bae      423311
 3.
 4.
 5.
@@ -20,22 +20,49 @@ Below each question, type in your short, to-the-point answers.
 Part A
 
 What do you see in the plots for ticks and time?
+tick: quadratic
+time: similar to tick, a little shaky curve
 
 How would you characterize those curves?
+similar to quadratic (n^2)
 
 Based on the current code for addLast, why do you see this behavior?
+while (p.next != null), we have to tick every time we point to p.next
+while run() runs, the list goes larger so
+we have to tick more and more every time we run addLast.
 
 Part B
 
 What behavior do you see now for appending n items to a list if you use a tail reference?
+we see a linear graph for tick
+time is almost always 0
 
 While we have reasoned so far only about time, if we are adding n elements to the end of a list, what is the asymptotic complexity of the additional space required when using the tail reference?
+O(n)
 
 Under what conditions would you recommend using a linked list with a tail reference vs. a linked list without at tail reference?
+without tail: when you add at first + no need to look at the last element (except when you really care about another 2 byte that tail consumes)
+with tail: when you add at last
 
 Part C
 
 Why does getSize() take the time it does?
+because it will always take n time as p navigates from head to the end of a list
 
-How did you achieve Θ(1) performance for getSize()?
+How did you achieve ��(1) performance for getSize()?
+We could declare a variable that counts the last node coming in.
+That way, we don't have to getSize() every time the node is added.
+
+(optional)
+Part D
+is it true that f(n)+g(n) = theta(g(n))?
+f(n) <= cg(n)
+f(n) + g(n) >= g(n) => OMEGA(g(n))
+f(n) + g(n) <= cg(n) + g(n) = (c+1)g(n) => O(g(n))
+-> TRUE
+
+is it true that f(n)/g(n) = THETA(g(n))?
+f(n) / g(n) <= cg(n) / g(n) = c => O(1)
+However, if f(n) = n, g(n) = n^2, then f(n)/g(n) becomes 1/n -> lower bound does not exist
+-> FALSE
 
