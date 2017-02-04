@@ -5,7 +5,7 @@ public class Problem4 {
 	public void makeAnArray(int n) {
 		int[] arr = new int[n];
 	}
-	// runtime = 
+	// runtime = O(1)
 	
 	public void printFirstItemThenFirstHalfThenSayHi100Times(int[] theArray) {
 		System.out.println(theArray[0]);
@@ -22,6 +22,6 @@ public class Problem4 {
 			System.out.println("hi");
 		}
 	}
-	// runtime = 
-	
+	// runtime = 1 + 2 + (1/2)n + 100 = O(n)
+	    
 }
