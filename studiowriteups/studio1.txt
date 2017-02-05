@@ -49,8 +49,12 @@ Part C
 
 Part D
 
-an+b = theta(n)
+an + b = THETA(n)
+=> an + b = O(n): c = 2a, n0 = b/a
+=> an + b = OMEGA(n): c = 0.5a, n0 = -2b/a
 
-omega: c=1/2a, n0=b/a
-theta: c=2a, n0=b/a
+Part E
 
+x^x > x!
+1.01^n < n^1000
+nlogn < n^1.5
