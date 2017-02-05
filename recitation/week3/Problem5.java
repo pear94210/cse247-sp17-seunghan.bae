@@ -42,7 +42,7 @@ public class Problem5 {
 	 *     => n^3, O(n^3)
 	 * 
 	 * (l) 0.003log_4(n) + lg(lg(n))
-	 *     => same?
+	 *     => 0.003log_4(n), O(log_4(n))
 	 */
 	
 }
