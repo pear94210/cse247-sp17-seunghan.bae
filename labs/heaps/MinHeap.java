@@ -64,8 +64,9 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		// You have to now put ans into the heap array
 		//   Recall in class we reduced insert to decrease
 		//
-		// FIXME
-		//
+		this.array[size] = ans;
+		decrease(ans.loc);
+		ticker.tick(2);
 		return ans;
 	}
 
@@ -99,6 +100,15 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// As described in lecture
 		//
+		if (loc > 1 && this.array[loc].getValue().compareTo(this.array[loc / 2].getValue()) < 0) {
+			Decreaser<T> temp = this.array[loc];
+			this.array[loc] = this.array[loc / 2];
+			this.array[loc].loc = loc;
+			this.array[loc / 2] = temp;
+			this.array[loc / 2].loc = loc / 2;
+			decrease(loc / 2);
+			ticker.tick(6);
+		}
 		
 	}
 	
@@ -117,8 +127,12 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//    Be sure to store null in an array slot if it is no longer
 		//      part of the active heap
 		//
-		// FIXME
-		//
+		this.array[1] = this.array[size];
+		this.array[1].loc = 1;
+		this.array[size] = null;
+		size--;
+		heapify(1);
+		ticker.tick(5);
 		return ans;
 	}
 
@@ -132,8 +146,42 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	private void heapify(int where) {
 		//
 		// As described in lecture
-		//  FIXME
 		//
+		if (where <= (size / 2)) {
+			if (this.array[(where * 2) + 1] == null) {
+				if (this.array[where].getValue().compareTo(this.array[where * 2].getValue()) > 0) {
+					Decreaser<T> temp = this.array[where];
+					this.array[where] = this.array[where * 2];
+					this.array[where].loc = where;
+					this.array[where * 2] = temp;
+					this.array[where * 2].loc = where * 2;
+					ticker.tick(5);
+				}
+			} else {
+				if (this.array[where * 2].getValue().compareTo(this.array[(where * 2) + 1].getValue()) < 0) {
+					if (this.array[where].getValue().compareTo(this.array[where * 2].getValue()) > 0) {
+						Decreaser<T> temp = this.array[where];
+						this.array[where] = this.array[where * 2];
+						this.array[where].loc = where;
+						this.array[where * 2] = temp;
+						this.array[where * 2].loc = where * 2;
+						ticker.tick(5);
+						heapify(where * 2);
+					}
+				} else if (this.array[where * 2].getValue().compareTo(this.array[(where * 2) + 1].getValue()) >= 0){
+					if (this.array[where].getValue().compareTo(this.array[(where * 2) + 1].getValue()) > 0) {
+						Decreaser<T> temp = this.array[where];
+						this.array[where] = this.array[(where * 2) + 1];
+						this.array[where].loc = where;
+						this.array[(where * 2) + 1] = temp;
+						this.array[(where * 2) + 1].loc = (where * 2) + 1;
+						ticker.tick(5);
+						heapify((where * 2) + 1);
+					}
+				}
+			}
+		}
+		
 	}
 	
 	/**
