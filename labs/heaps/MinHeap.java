@@ -66,11 +66,11 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		this.array[this.size] = ans;
 		decrease(this.size);
-		ticker.tick(2);
+		ticker.tick(3);
 		return ans;
 	}
 
-	/**
+	/**s
 	 * This method responds to an element in the heap decreasing in
 	 * value.   As described in lecture, that element might have to swap
 	 * its way up the tree so that the heap property is maintained.
@@ -131,8 +131,8 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		this.array[1].loc = 1;
 		this.array[this.size] = null;
 		this.size--;
-		heapify(1);
 		ticker.tick(5);
+		heapify(1);
 		return ans;
 	}
 
