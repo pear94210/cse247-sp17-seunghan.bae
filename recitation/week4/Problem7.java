@@ -24,5 +24,11 @@ public class Problem7 {
 	 * if n is a power of two (ex. 8 x 8).
 	 * 
 	 * => (2^k) * (2^k) = 2^2k = 4^k = (3+1)^k = SUM(kCi*(3^i)*(1^k-i)) = 1 + 3(...)
+	 * 
+	 * or
+	 * 
+	 * => 2*2: yes
+	 *    assume true for (2^n)*(2^n)
+	 *    (2^n+1)*(2^n+1) = 4^n+1 = 4(4^n) = (1+3)(4^n) = 4^n + (3*4^n): yes
 	 */
 }
