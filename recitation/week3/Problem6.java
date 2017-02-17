@@ -8,7 +8,7 @@ public class Problem6 {
 	 * TRUE of FALSE and correct the formula in the latter case.
 	 * 
 	 * (a) Rule of sums: O(f + g) = O(f) + O(g)
-	 *     => TRUE
+	 *     => FALSE: O(f + g) = MAX{O(f), O(g)}
 	 * 
 	 * (b) Rule of products: O(f*g) = O(f) * O(g)
 	 *     => TRUE

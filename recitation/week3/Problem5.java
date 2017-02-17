@@ -24,7 +24,7 @@ public class Problem5 {
 	 *     => nlg(n), O(nlg(n))
 	 * 
 	 * (f) 3log_8(n) + lg(lg(lg(n)))
-	 *     => 3log_8(n), O(log_8(n))
+	 *     => 3log_8(n), O(lg(n))
 	 * 
 	 * (g) 100n + 0.01n^2
 	 *     => 0.01n^2, O(n^2)
@@ -42,7 +42,7 @@ public class Problem5 {
 	 *     => n^3, O(n^3)
 	 * 
 	 * (l) 0.003log_4(n) + lg(lg(n))
-	 *     => 0.003log_4(n), O(log_4(n))
+	 *     => 0.003log_4(n), O(lg(n))
 	 */
 	
 }
