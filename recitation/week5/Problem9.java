@@ -7,4 +7,6 @@ public class Problem9 {
 	 * write code to calculate the number of ways of representing n cents.
 	 */
 
+	
+	
 }
