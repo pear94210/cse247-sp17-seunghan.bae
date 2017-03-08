@@ -66,8 +66,7 @@ public class ShortestPaths {
 			Decreaser<VertexAndDist> d = pq.insert(a);
 			map.put(v, d);
 		}
-
-
+		
 		//
 		// Now we decrease the start node's distance from
 		//   itself to 0.
@@ -78,14 +77,28 @@ public class ShortestPaths {
 		// and then decrease it using the Decreaser handle
 		//
 		startVertDist.decrease(startVertDist.getValue().sameVertexNewDistance(0));
-
-
+		
 		//
 		// OK you take it from here
 		// Extract nodes from the pq heap
 		//   and act upon them as instructed in class and the text.
 		//
-		// FIXME
+		while (!pq.isEmpty()) {
+			VertexAndDist minVd = pq.extractMin();
+			Vertex minV = minVd.getVertex();
+			int minD = minVd.getDistance();
+			
+			for (Edge e : minV.edgesFrom()) {
+				Decreaser<VertexAndDist> vd = map.get(e.to);
+				int newDist = minD + weights.get(e);
+				
+				if (vd.getValue().getDistance() > newDist) {
+					vd.decrease(vd.getValue().sameVertexNewDistance(newDist));
+					toEdge.replace(vd.getValue().getVertex(), e);
+				}
+			}
+		}
+		
 	}
 
 	
@@ -102,9 +115,12 @@ public class ShortestPaths {
 	public LinkedList<Edge> returnPath(Vertex endVertex) {
 		LinkedList<Edge> path = new LinkedList<Edge>();
 
-		//
-		// FIXME
-		//
+		if (endVertex == this.startVertex) return path;
+		else {
+			Edge e = toEdge.get(endVertex);
+			path.add(e);
+			returnPath(e.from);
+		}
 
 		return path;
 	}
