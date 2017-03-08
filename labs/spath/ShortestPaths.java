@@ -119,6 +119,7 @@ public class ShortestPaths {
 		else {
 			Edge e = toEdge.get(endVertex);
 			path.add(e);
+			
 			returnPath(e.from);
 		}
 
