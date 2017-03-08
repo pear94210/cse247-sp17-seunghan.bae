@@ -27,12 +27,28 @@ public class KWayMergeSort {
 		// the operations taken to perform the K-way merge sort.
 		//
 		Integer[] ans = new Integer[n];
-		for (int i=0; i < n; ++i) {
-			ans[i] = input[i];
-			ticker.tick();
-		}
 		
-		return ans;
+		if (input.length == 1) {
+			ans[0] = input[0];
+			ticker.tick();
+			
+			return ans;
+		} else {
+			Integer[][] newInput = new Integer[K][input.length / K];
+			Integer[][] newAns = new Integer[K][input.length / K];
+			
+			for (int r = 0; r < K; r++) {
+				for (int c = 0; c < input.length / K; c++) {
+					newInput[r][c] = input[(r * (input.length / K)) + c];
+					ticker.tick();
+				}
+				newAns[r] = kwaymergesort(K, newInput[r], ticker);
+			}
+			
+			// FIXME: merge K arrays into one
+			
+			return ans;
+		}
 	}
 
 }
