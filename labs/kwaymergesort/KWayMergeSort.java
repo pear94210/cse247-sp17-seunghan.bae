@@ -36,6 +36,7 @@ public class KWayMergeSort {
 		} else {
 			Integer[][] newInput = new Integer[K][input.length / K];
 			Integer[][] newAns = new Integer[K][input.length / K];
+			ticker.tick(input.length);
 			
 			for (int r = 0; r < K; r++) {
 				for (int c = 0; c < input.length / K; c++) {
@@ -43,11 +44,52 @@ public class KWayMergeSort {
 					ticker.tick();
 				}
 				newAns[r] = kwaymergesort(K, newInput[r], ticker);
+				ticker.tick();
 			}
 			
-			// FIXME: merge K arrays into one
+			ans = mergeArrays(newAns, ticker)[0];
 			
 			return ans;
+		}
+	}
+	
+	static Integer[][] mergeArrays(Integer[][] array, Ticker ticker) {
+		if (array.length == 1) {
+			ticker.tick();
+			return array;
+		}
+		else {
+			Integer[][] ans = new Integer[array.length / 2][array[0].length * 2];
+			ticker.tick(ans.length * ans[0].length);
+			
+			for (int r = 0; r < ans.length; r++) {
+				int countA = 0;
+				int countB = 0;
+				
+				for (int c = 0; c < ans[r].length; c++) {
+					if (array[2 * r][countA] <= array[(2 * r) + 1][countB]) {
+						ans[r][c] = array[2 * r][countA];
+						if (countA < array[2 * r].length - 1) {
+							countA++;
+							ticker.tick();
+						} else {
+							array[2 * r][countA] = Integer.MAX_VALUE;
+							ticker.tick();
+						}
+					} else {
+						ans[r][c] = array[(2 * r) + 1][countB];
+						if (countB < array[(2 * r) + 1].length - 1) {
+							countB++;
+							ticker.tick();
+						} else {
+							array[(2 * r) + 1][countB] = Integer.MAX_VALUE;
+							ticker.tick();
+						}
+					}
+				}
+			}
+			
+			return mergeArrays(ans, ticker);
 		}
 	}
 
