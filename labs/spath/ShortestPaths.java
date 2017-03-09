@@ -94,7 +94,8 @@ public class ShortestPaths {
 				
 				if (vd.getValue().getDistance() > newDist) {
 					vd.decrease(vd.getValue().sameVertexNewDistance(newDist));
-					toEdge.replace(vd.getValue().getVertex(), e);
+					toEdge.remove(vd.getValue().getVertex());
+					toEdge.put(vd.getValue().getVertex(), e);
 				}
 			}
 		}
@@ -114,16 +115,19 @@ public class ShortestPaths {
 	 */
 	public LinkedList<Edge> returnPath(Vertex endVertex) {
 		LinkedList<Edge> path = new LinkedList<Edge>();
-
+		
 		if (endVertex == this.startVertex) return path;
 		else {
 			Edge e = toEdge.get(endVertex);
+			
+			while (e.from != startVertex) {
+				path.add(e);
+				e = toEdge.get(e.from);
+			}
 			path.add(e);
 			
-			returnPath(e.from);
+			return path;
 		}
-
-		return path;
 	}
 	
 	/**
