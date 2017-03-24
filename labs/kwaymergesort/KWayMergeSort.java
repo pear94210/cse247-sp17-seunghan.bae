@@ -28,19 +28,19 @@ public class KWayMergeSort {
 		//
 		Integer[] ans = new Integer[n];
 		
-		if (input.length == 1) {
+		if (n == 1) {
 			ans[0] = input[0];
 			ticker.tick();
 			
 			return ans;
 		} else {
-			Integer[][] newInput = new Integer[K][input.length / K];
-			Integer[][] newAns = new Integer[K][input.length / K];
-			ticker.tick(input.length);
+			Integer[][] newInput = new Integer[K][n / K];
+			Integer[][] newAns = new Integer[K][n / K];
+			ticker.tick(n);
 			
 			for (int r = 0; r < K; r++) {
-				for (int c = 0; c < input.length / K; c++) {
-					newInput[r][c] = input[(r * (input.length / K)) + c];
+				for (int c = 0; c < n / K; c++) {
+					newInput[r][c] = input[(r * (n / K)) + c];
 					ticker.tick();
 				}
 				newAns[r] = kwaymergesort(K, newInput[r], ticker);
