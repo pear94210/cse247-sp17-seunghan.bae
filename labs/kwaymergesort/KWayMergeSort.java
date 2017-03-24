@@ -53,7 +53,7 @@ public class KWayMergeSort {
 		}
 	}
 	
-	static Integer[][] mergeArrays(Integer[][] array, Ticker ticker) {
+	private static Integer[][] mergeArrays(Integer[][] array, Ticker ticker) {
 		if (array.length == 1) {
 			ticker.tick();
 			return array;
