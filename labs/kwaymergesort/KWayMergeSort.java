@@ -57,8 +57,7 @@ public class KWayMergeSort {
 		if (array.length == 1) {
 			ticker.tick();
 			return array;
-		}
-		else {
+		} else {
 			Integer[][] ans = new Integer[array.length / 2][array[0].length * 2];
 			ticker.tick(ans.length * ans[0].length);
 			
