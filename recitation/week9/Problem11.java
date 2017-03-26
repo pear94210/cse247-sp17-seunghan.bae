@@ -35,8 +35,8 @@ public class Problem11 {
 	 * 
 	 * How does the hashcode for set differ from the hashcode for list?
 	 * 
-	 * set: order does not matter; value matters => same value, same hashcode
-	 * list: order matters => even for elements with same value, different hashcode
+	 * set: order does not matter; value matters => same values, same hashcode
+	 * list: order matters => with same values ordered differently, different hashcode
 	 */
 	
 }
