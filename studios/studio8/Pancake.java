@@ -15,11 +15,8 @@ public class Pancake {
 
 	@Override
 	public int hashCode(){
-		int hash = radius;
-		if (wheat){
-			hash = hash + 5;
-		}
-		return hash;
+		if (this.wheat) return this.radius;
+		else return -this.radius;
 	}
 
 	@Override
