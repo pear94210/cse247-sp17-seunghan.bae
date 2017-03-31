@@ -15,7 +15,7 @@ public class Syrup {
 	}
 
 	public int hashCode(){
-		return rand.nextInt();
+		return this.brand.hashCode() * (int)(31 * this.density);
 	}
 
 	@Override
