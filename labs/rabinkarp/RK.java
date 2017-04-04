@@ -7,14 +7,14 @@ public class RK {
 	//  so that you get full credit by satisfying all
 	//  of its requirements
 	//
-	
+
 
 	/**
 	 * Rabin-Karp string matching for a window of the specified size
 	 * @param m size of the window
 	 */
 	public RK(int m) {
-
+		
 	}
 	
 
@@ -24,7 +24,11 @@ public class RK {
 	 * @return
 	 */
 	public int nextCh(char d) {
-		return 0;
+		int hash = 0;
+		
+		
+		
+		return hash;
 	}
 
 }
