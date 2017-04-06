@@ -8,12 +8,49 @@ Students in your studio group:
 
     Name        Student ID (begins with a 4)
 	
-1.
-2.
+1. Skylar Nam     435454
+2. Seunghan Bae   423311
 3.
 4.
 5.
 6.
+
+
+
+1. a graph that resembles a random uniform distribution
+2. it would look denser at some points and sparser at other points
+3. 3 objects
+4. 2 objects
+5. because sets consider new Color (0,0,0) and Color.BLACK as the same and does not allow duplicates.
+Thus, the "Black" color was only added once (returning true.)
+6. Yes, the hash values were distributed pretty much uniformly.
+7. 2 objects
+8. 2 objects
+9. because only one object should have been added.
+10. If the points have the same x, y coordinates, then they're the same.
+11. Even though we're looking at the "set" of points, the implementation of hashcode() for Point added those that are the same.
+Thus, the hashcode() function seems to have some problem.
+12. Very well!
+13. Yes
+14. Even if they do not equal each other, they can result in the same hashcode
+15. if radius = 20 and !wheat, the hashcode value = 20. if radius = 15 and wheat, then the value is again 20.
+16. public int hashCode(){
+		int hash = radius;
+		if (wheat) return hash;
+		else return -hash;
+	}
+17. Yes
+18. 
+public int hashCode(){
+		int hash = brand.hashCode();
+		
+		return (int)(density * 31) + hash;
+	}
+19. They are uniformly distributed.
+
+
+
+
 
 
 What distribution do you see plotted (in the histogram or an XY Scatter plot) for Color hashcodes?
