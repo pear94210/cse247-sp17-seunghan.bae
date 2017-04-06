@@ -1,0 +1,41 @@
+1. T(n) = 3T(n/2) + n^2 = Θ(n^2)
+
+2. T(n) = 4T(n/2) + n^2 = Θ((n^2)logn)
+
+3. T(n) = T(n/2) + 2^n = Θ(2^n)
+
+4. T(n) = (2^n)T(n/2) + n^n = N/A?
+
+5. T(n) = 16T(n/4) + n = Θ(n^2)
+
+6. T(n) = 2T(n/2) + nlogn = Θ(nlogn
+
+7. T(n) = 2T(n/2) + n/logn = N/A
+
+8. T(n) = 2T(n/4) + n^0.51 = Θ(n^0.51)
+
+9. T(n) = 0.5T(n/2) + 1/n = Θ((1/n)logn) (N/A)
+
+10. T(n) = 16T(n/4) + n! = Θ(n!)
+
+11. T(n) = sqrt(2)T(n/2) + logn = Θ(sqrt(n)) (N/A)
+
+12. T(n) = 3T(n/2) + n = Θ(n^lg3)
+
+13. T(n) = 3T(n/3) + sqrt(n) = Θ(n)
+
+14. T(n) = 4T(n/2) + cn = Θ(n^2)
+
+15. T(n) = 3T(n/4) + nlogn = Θ(nlogn)
+
+16. T(n) = 3T(n/3) + n/2 = Θ(nlogn)
+
+17. T(n) = 6T(n/3) + (n^2)logn = Θ((n^2)logn)
+
+18. T(n) = 4T(n/2) + n/logn = Θ(n^2)
+
+19. T(n) = 64T(n/8) - (n^2)logn = N/A
+
+20. T(n) = 7T(n/3) + n^2 = Θ(n^2)
+
+21. T(n) = 4T(n/2) + logn = Θ(n^2)
