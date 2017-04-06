@@ -40,7 +40,7 @@ A5. Why do we need addHelper?
 - Because we have to 1) get to the leaf part of the tree and then 2) create a new node that will link itself to its parents later.
 
 A6. Why is it private instead of public?
-- add remove isEmpty
+- add remove isEmpty are the only things that we want to openly share; we want to keep other methods private to be only used within the class
 
 A7. Does the code actually remove the node containing the value to be removed? If not, what is actually happening?
 - if the node is the leaf, it is actually removed. However, when the value is in the middle of the tree, you're not actually
