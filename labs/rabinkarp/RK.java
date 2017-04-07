@@ -7,19 +7,19 @@ public class RK {
 	//  so that you get full credit by satisfying all
 	//  of its requirements
 	//
-	char[] array;
-	int hash;
-	int power;
+	private char[] array;
+	private int hash;
+	private int power;
 
 	/**
 	 * Rabin-Karp string matching for a window of the specified size
 	 * @param m size of the window
 	 */
 	public RK(int m) {
-		array = new char[m];
-		hash = 0;
-		power = 1;
-		for (int i = 0; i < m; i++) power = (power * 31) % 511;
+		this.array = new char[m];
+		this.hash = 0;
+		this.power = 1;
+		for (int i = 0; i < m; i++) this.power = (this.power * 31) % 511;
 	}
 	
 
@@ -29,17 +29,17 @@ public class RK {
 	 * @return
 	 */
 	public int nextCh(char d) {
-		int temp = (int)array[0];
-		for (int i = 0; i < array.length - 1; i++) array[i] = array[i + 1];
-		array[array.length - 1] = d;
+		int c = (int)this.array[0];
+		for (int i = 0; i < this.array.length - 1; i++) this.array[i] = this.array[i + 1];
+		this.array[this.array.length - 1] = d;
 		
-		int hash1 = hash * 31;
-		int hash2 = (power * temp) % 511;
+		int hash1 = this.hash * 31;
+		int hash2 = (this.power * c) % 511;
 		
-		hash = ((hash1 + (int)d) - (hash2 % 511)) % 511;
-		if (hash < 0) hash += 511;
+		this.hash = ((hash1 + (int)d) - (hash2 % 511)) % 511;
+		if (this.hash < 0) hash += 511;
 				
-		return hash;
+		return this.hash;
 	}
 
 }
