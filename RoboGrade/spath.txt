@@ -1,86 +1,93 @@
 -------------------
-CSE247 Robot tester starts testing spath on 2017-03-28 07:12:55 -0500
+CSE247 Robot tester starts testing spath on 2017-04-07 15:24:09 -0500
 
 ========
 Testing in GradingRepos/repos/cse247-s17-students-seunghan.bae: spath as of 2017-03-24 09:00
 ========
-Now in: /Users/roncytron/Desktop/cse247sp17/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae
+Now in: /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae
 Your branch is up-to-date with 'origin/master'.
-Updating cf2e555..b5202f9
+HEAD is now at fd6ac29 Syrup.java edited online with Bitbucket
+No local changes to save
+
+Updating fd6ac29..bedeff8
 Fast-forward
- RoboGrade/heaps.txt                   | 231 ++++++++++++++++++++++++++++++++++
- labs/kwaymergesort/KWayMergeSort.java |  65 +++++++++-
- labs/spath/ShortestPaths.java         |  42 +++++--
- outputs/mergesort-ticks0.csv          |  20 +++
- outputs/mergesort-time0.csv           |  20 +++
- propagates/studios/studio4/Prob1.xlsx | Bin 0 -> 70324 bytes
- propagates/studios/studio4/Prob2.xlsx | Bin 0 -> 70296 bytes
- propagates/studios/studio4/Prob3.xlsx | Bin 0 -> 71601 bytes
- propagates/studios/studio4/Prob4.xlsx | Bin 0 -> 69185 bytes
- recitation/week3/Problem5.java        |   4 +-
- recitation/week3/Problem6.java        |   2 +-
- recitation/week5/Problem8.java        |  25 ++++
- recitation/week5/Problem9.java        |  33 +++++
- recitation/week9/Problem10.java       |  23 ++++
- recitation/week9/Problem11.java       |  42 +++++++
- studiowriteups/studio4.txt            |  17 +--
- 16 files changed, 498 insertions(+), 26 deletions(-)
- create mode 100644 RoboGrade/heaps.txt
- create mode 100644 outputs/mergesort-ticks0.csv
- create mode 100644 outputs/mergesort-time0.csv
- create mode 100644 propagates/studios/studio4/Prob1.xlsx
- create mode 100644 propagates/studios/studio4/Prob2.xlsx
- create mode 100644 propagates/studios/studio4/Prob3.xlsx
- create mode 100644 propagates/studios/studio4/Prob4.xlsx
- create mode 100644 recitation/week5/Problem8.java
- create mode 100644 recitation/week5/Problem9.java
- create mode 100644 recitation/week9/Problem10.java
- create mode 100644 recitation/week9/Problem11.java
+ labs/rabinkarp/RK.java                    |   21 +-
+ outputs/sortusingbst-ticks0.csv           |  100 +++
+ outputs/sortusingbst-ticks1.csv           |  100 +++
+ outputs/sortusingbst-time0.csv            |  100 +++
+ outputs/sortusingbst-time1.csv            |  100 +++
+ outputs/sortusingunorderedlist-ticks0.csv |  100 +++
+ outputs/sortusingunorderedlist-time0.csv  |  100 +++
+ outputs/studio8p1.csv                     | 1001 +++++++++++++++++++++++++++++
+ outputs/studio8p2.csv                     | 1001 +++++++++++++++++++++++++++++
+ propagates/studios/studio4/Prob1.xlsx     |  Bin 70324 -> 0 bytes
+ propagates/studios/studio4/Prob2.xlsx     |  Bin 70296 -> 0 bytes
+ propagates/studios/studio4/Prob3.xlsx     |  Bin 71601 -> 0 bytes
+ propagates/studios/studio4/Prob4.xlsx     |  Bin 69185 -> 0 bytes
+ studios/studio10/BST.java                 |    1 +
+ studios/studio10/SortedSetUsingBST.java   |    4 +-
+ studios/studio5/MasterTheorem.txt         |   41 ++
+ studiowriteups/studio10.txt               |   23 +-
+ studiowriteups/studio8.txt                |   41 +-
+ 18 files changed, 2722 insertions(+), 11 deletions(-)
+ create mode 100644 outputs/sortusingbst-ticks0.csv
+ create mode 100644 outputs/sortusingbst-ticks1.csv
+ create mode 100644 outputs/sortusingbst-time0.csv
+ create mode 100644 outputs/sortusingbst-time1.csv
+ create mode 100644 outputs/sortusingunorderedlist-ticks0.csv
+ create mode 100644 outputs/sortusingunorderedlist-time0.csv
+ create mode 100644 outputs/studio8p1.csv
+ create mode 100644 outputs/studio8p2.csv
+ delete mode 100644 propagates/studios/studio4/Prob1.xlsx
+ delete mode 100644 propagates/studios/studio4/Prob2.xlsx
+ delete mode 100644 propagates/studios/studio4/Prob3.xlsx
+ delete mode 100644 propagates/studios/studio4/Prob4.xlsx
+ create mode 100644 studios/studio5/MasterTheorem.txt
 Going back in time to: 2017-03-24 09:00
 At hash 7f4e5d018d857d8a01d98a81b8b6d2aa1b4cf19b
 
-Buildfile: /Users/roncytron/Desktop/cse247sp17/cse247-support/build.xml
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
 
 copytest:
-     [echo] would copy from /Users/roncytron/git/cse247-f16-students key seunghan.bae testfilesource testing/TestShortestPathSilent package spath repo GradingRepos/repos/cse247-s17-students-seunghan.bae
-     [copy] Copying 1 file to /Users/roncytron/Desktop/cse247sp17/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/labs/spath/testing
+     [echo] would copy from /Users/tdelanuez/git/cse247-s17-students-adelanuez key seunghan.bae testfilesource testing/TestShortestPathSilent package spath repo GradingRepos/repos/cse247-s17-students-seunghan.bae
+     [copy] Copying 1 file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/labs/spath/testing
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
 Compiling the code
-Buildfile: /Users/roncytron/Desktop/cse247sp17/cse247-support/build.xml
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
 
 compile:
      [echo] Compiling spath/ShortestPaths
-    [mkdir] Created dir: /Users/roncytron/Desktop/cse247sp17/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/bin
-    [javac] Compiling 1 source file to /Users/roncytron/Desktop/cse247sp17/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/bin
+    [mkdir] Created dir: /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/bin
+    [javac] Compiling 1 source file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/bin
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
-Buildfile: /Users/roncytron/Desktop/cse247sp17/cse247-support/build.xml
+Total time: 1 second
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
 
 compile:
      [echo] Compiling spath/testing/TestShortestPathSilent
-    [javac] Compiling 1 source file to /Users/roncytron/Desktop/cse247sp17/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/bin
+    [javac] Compiling 1 source file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/bin
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
 Running test testing.TestShortestPathSilent
-Buildfile: /Users/roncytron/Desktop/cse247sp17/cse247-support/build.xml
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
 
 test:
     [junit] Running spath.testing.TestShortestPathSilent
     [junit] Testsuite: spath.testing.TestShortestPathSilent
-    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.53 sec
-    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.53 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.321 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.321 sec
     [junit] 
-    [junit] Testcase: test took 2.519 sec
+    [junit] Testcase: test took 3.307 sec
 
 BUILD SUCCESSFUL
-Total time: 2 seconds
+Total time: 3 seconds
 ================
 Lab is counted as working
 ================
 
-CSE247 Robot tester ends testing spath on 2017-03-28 07:13:04 -0500
+CSE247 Robot tester ends testing spath on 2017-04-07 15:24:20 -0500
 -------------------
