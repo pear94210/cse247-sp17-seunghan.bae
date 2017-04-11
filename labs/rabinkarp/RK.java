@@ -10,6 +10,7 @@ public class RK {
 	private char[] array;
 	private int hash;
 	private int power;
+	private int pointer;
 
 	/**
 	 * Rabin-Karp string matching for a window of the specified size
@@ -20,6 +21,7 @@ public class RK {
 		this.hash = 0;
 		this.power = 1;
 		for (int i = 0; i < m; i++) this.power = (this.power * 31) % 511;
+		this.pointer = 0;
 	}
 	
 	/**
@@ -28,13 +30,14 @@ public class RK {
 	 * @return
 	 */
 	public int nextCh(char d) {
-		int c = (int)this.array[0];
-		for (int i = 0; i < this.array.length - 1; i++) this.array[i] = this.array[i + 1];
-		this.array[this.array.length - 1] = d;
+		int c = (int)this.array[this.pointer];
+		this.array[this.pointer] = d;
+		
+		if (this.pointer == this.array.length - 1) this.pointer = 0;
+		else this.pointer++;
 		
 		int hash1 = this.hash * 31;
 		int hash2 = (this.power * c) % 511;
-		
 		this.hash = ((hash1 + (int)d) - (hash2 % 511)) % 511;
 		if (this.hash < 0) hash += 511;
 				
