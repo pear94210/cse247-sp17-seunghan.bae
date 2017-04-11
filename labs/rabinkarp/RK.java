@@ -22,7 +22,6 @@ public class RK {
 		for (int i = 0; i < m; i++) this.power = (this.power * 31) % 511;
 	}
 	
-
 	/**
 	 * Compute the rolling hash for the previous m-1 characters with d appended.
 	 * @param d the next character in the target string
