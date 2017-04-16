@@ -8,8 +8,8 @@ Students in your studio group:
 
     Name        Student ID (begins with a 4)
 	
-1.
-2.
+1. Skylar Nam          435454
+2. Seunghan Bae        423311
 3.
 4.
 5.
@@ -20,26 +20,37 @@ Students in your studio group:
 Part A
 
 A1. Why do sad and happy appear as they do? Why is happy indented? What are the parent, left-child, and right-child relationships between happy and sad?
+- Because happy is sad's child. We assumed that because the alphabet "h" comes before "s" happy is smaller (on the left) than sad.
+The parent is "sad", and the left-child is "happy."
 
 Modify the code in the main method so that some string appears above sad, indented as much as happy.
 
 A2. What string did you use?
+- "tiger"
 
 In the numbers that follow, find the first and last entries in the tree that is shown (on its side, as discussed in lecture).
 
 A3. Is the first number always the first line to be shown in such a display?
+- No, because the last number is always at the top.
 
 A4. Is the last number always the last line to be shown?
+- No, because the first number is always at the bottom.
 
 A5. Why do we need addHelper?
+- Because we have to 1) get to the leaf part of the tree and then 2) create a new node that will link itself to its parents later.
 
 A6. Why is it private instead of public?
+- add remove isEmpty are the only things that we want to openly share; we want to keep other methods private to be only used within the class
 
 A7. Does the code actually remove the node containing the value to be removed? If not, what is actually happening?
+- if the node is the leaf, it is actually removed. However, when the value is in the middle of the tree, you're not actually
+"removing" it, but rather you are "substituting" it with the leaf value and then cutting out (removing) that leaf
 
 A8. Why does the code fail to execute properly?
+- Because it is extending a "sorted" set and colors cannot be compared
 
 A9. Why does eclipse not report a problem when you try to create a BST of type Color?
+- Because it takes in any types (E)
 
 
 Part B
@@ -48,22 +59,26 @@ Part B
 SortedSetUsingBST (random input)
 
 B1. What behavior do you see in the output? You will likely have to rely on ticks rather than time, because the times are so fast.
+- the ticks seem to take almost linear time but probably longer than linear. (nlogn)
 
 B2. What behavior did you expect to see, and why?
-
+- We expected the same result. (it's putting in n random numbers into a tree to make it shaped like a triangle)
 
 SortedSetUsingBST (sorted input)
 
 B3. What behavior do you see in the output given the sorted input?
+- the graph looks like it's taking n^2 time.
 
 B4. What behavior did you expect to see, and why?
+- n^2, because if the array is already sorted, we are just adding it to the right of the tree on and on, making the height of a tree n.
 
 SortedSetUsingUnorderedList
 
 B5. What behavior do you see in the output when a sorted set is implemented by an unordered list? Adding to the list should be quick, so why are we seeing these times?
+- n^2. Because we're using a list to implement a sorted set and because we're making a "set," we have to iterate through the full list every time we want to check duplicates.
 
 B6. What behavior did you expect to see, and why?
-
+- The.. same behavior
 
 
 
