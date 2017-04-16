@@ -4,8 +4,8 @@ public class Problem13 {
 
 	/*
 	 * In order to avoid false positives, consider computing multiple hashes of the sliding
-	 * window and checking the resulting values. Instead of just repeatedly multiplying by 31,
-	 * consider doing another computation that multiplies by 7, 127, etc.
+	 * - window and checking the resulting values. Instead of just repeatedly multiplying by 31,
+	 *   consider doing another computation that multiplies by 7, 127, etc.
 	 * 
 	 * How does this change the complexity of the Rabin-Karp algorithm?
 	 * - using three different multipliers will result in a more complex algorithm.
