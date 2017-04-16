@@ -12,7 +12,7 @@ public class Problem15 {
 	 * - tree: first (from low to high), second (from high to low)
 	 * - cross: from high to low, in a different sub-tree
 	 * - back: first (from high to low), second (from low to high), in the same sub-tree
-	 * - chord: ?
+	 * - chord: usually exists within a cycle, connecting two non-adjacent vertices
 	 */
 	
 }
