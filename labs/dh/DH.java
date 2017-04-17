@@ -21,7 +21,7 @@ public class DH {
 	 * @return
 	 */
 	public long getPubKey() {
-		return 0; // FIXME
+		return this.modexp.toThePower(this.privKey);
 	}
 	
 	/**
@@ -31,7 +31,7 @@ public class DH {
 	 * @return
 	 */
 	public long getAgreedNum(long otherPubKey) {
-		return 0;  // FIXME
+		return this.modexp.gToTheXModP(otherPubKey, this.privKey, this.modulus);
 	}
 	
 }
