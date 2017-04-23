@@ -21,7 +21,7 @@ public class DH {
 	 * @return
 	 */
 	public long getPubKey() {
-		return this.modexp.toThePower(this.privKey);
+		return modexp.toThePower(this.privKey);
 	}
 	
 	/**
@@ -31,7 +31,8 @@ public class DH {
 	 * @return
 	 */
 	public long getAgreedNum(long otherPubKey) {
-		return this.modexp.gToTheXModP(otherPubKey, this.privKey, this.modulus);
+		return MExp.gToTheXModP(otherPubKey, this.privKey, this.modulus);
+		// static function: call it using the variable "type" instead of variable name
 	}
 	
 }
