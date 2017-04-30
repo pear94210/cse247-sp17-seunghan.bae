@@ -1,0 +1,58 @@
+-------------------
+CSE247 Robot tester starts testing dh on 2017-04-28 16:41:33 -0500
+
+========
+Testing in GradingRepos/repos/cse247-s17-students-seunghan.bae: dh as of 2017-04-28 09:00
+========
+Now in: /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 355737e lab12 + recit
+No local changes to save
+
+Already up-to-date.
+Going back in time to: 2017-04-28 09:00
+At hash 355737e37c2d217920a09d1fe0d571a9b191dbad
+
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /Users/tdelanuez/git/cse247-s17-students-adelanuez key seunghan.bae testfilesource testing/TestDH package dh repo GradingRepos/repos/cse247-s17-students-seunghan.bae
+Compiling the code
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+compile:
+     [echo] Compiling dh/DH
+    [mkdir] Created dir: /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/bin
+    [javac] Compiling 1 source file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+compile:
+     [echo] Compiling dh/testing/TestDH
+    [javac] Compiling 1 source file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-seunghan.bae/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test testing.TestDH
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+test:
+    [junit] Running dh.testing.TestDH
+    [junit] Testsuite: dh.testing.TestDH
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec
+    [junit] 
+    [junit] Testcase: testPubKeys took 0.007 sec
+    [junit] Testcase: testLectureExample took 0 sec
+    [junit] Testcase: testAgreement took 0.008 sec
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing dh on 2017-04-28 16:41:39 -0500
+-------------------
