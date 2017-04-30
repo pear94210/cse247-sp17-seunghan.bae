@@ -29,12 +29,13 @@ public class BreakCaesar {
 	 * @return the rotation factor that created the encrypted text
 	 */
 	public int getRotation() {
-		//
-		// Use your mad hacking skills to determine the rotation value
-		// The chars array conveniently has all the characters of the
-		//    rotated message
-		// 
-		return 0; // FIXME
+		int index = 0;
+		while (chars[index] != 'A') index++;
+		index++;
+		
+		int ans = chars[index] - 'm';
+		if (ans < 0) ans += 26;
+		return ans;
 	}
 	
 	/**
